@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import {useEffect, useRef, useState} from "react";
 
-function ShoppingCard({items, setItems, isExpending , isClosing,setIsClosing}){
+function ShoppingCard({changeStates,setPurchasedItems,itemsInCard, setItemsInCard, isExpending , isClosing,setIsClosing,shopItems,setShopItems}){
 
     const expending = isExpending ? "expending" : ""
     const closing = isClosing ? "closing" : ""
@@ -9,13 +9,31 @@ function ShoppingCard({items, setItems, isExpending , isClosing,setIsClosing}){
     const itemsEndRef = useRef(null)
 
     const scrollToBottom = () => {
-        itemsEndRef.current?.scrollIntoView({ inline:"center",  behavior: "smooth" ,block:"nearest" })
+        itemsEndRef.current?.scrollIntoView({  behavior: "smooth" ,block:"nearest" })
     }
 
-    useEffect(() => {
-        scrollToBottom()
-    }, [items]);
 
+    useEffect(() => {
+            scrollToBottom()
+
+    }, [itemsInCard]);
+
+
+    function removeFromCard(item,index){
+        const newArray = shopItems.map((newItem,newIndex)=>{
+            if(item.title === newItem.title){
+                newItem.stock++
+            }
+            return newItem
+
+        })
+
+        let newItemsInCard = [...itemsInCard.slice(0,index),...itemsInCard.slice(index+1)]
+
+
+        setItemsInCard(newItemsInCard)
+        setShopItems(newArray)
+    }
 
 
     let sum = 0
@@ -26,24 +44,27 @@ function ShoppingCard({items, setItems, isExpending , isClosing,setIsClosing}){
             if(e.animationName === "reverseExpand")
                 setIsClosing(false)
         }} className={"shopping-card " + expending + " "+closing}>
-            {items.map((item, index) => {
+            {itemsInCard.map((item, index) => {
                 sum+=item.price
 
 
                 return (
-                    <CardElement  item={item} key = {index}/>
+                    <CardElement  item={item} key = {index} index={index} onClick={removeFromCard}/>
                 )
             })}
             <div className={"button-container"}>
-                <button className={"checkout-button"}>Checkout</button>
+                <button onClick={()=>{
+                    setPurchasedItems([...itemsInCard])
+                    setItemsInCard([])
+                    changeStates()
+                }} className={"checkout-button"}>Checkout</button>
             </div>
             <p ref={itemsEndRef}>{sum}</p>
         </div>
-
     )
 }
 
-function CardElement({item}){
+function CardElement({item,onClick,index}){
     const [specialClass,setSpecialClass] = useState("special")
 
 
@@ -61,8 +82,10 @@ function CardElement({item}){
             </div>
             <p className={"title"}>{item.title}</p>
             <p className={"price"}>{item.price} $</p>
+            <div className={"button-container"}>
+                <button onClick={()=>{onClick(item,index)}} className={"remove-card-item-button"}>Remove</button>
+            </div>
         </div>
-
 
 
     )
@@ -70,10 +93,9 @@ function CardElement({item}){
 }
 
 
-
 ShoppingCard.propTypes = {
-    items: PropTypes.array.isRequired,
-    setItems: PropTypes.func.isRequired,
+    itemsInCard: PropTypes.array.isRequired,
+    setItemsInCard: PropTypes.func.isRequired,
 }
 
 export default ShoppingCard
