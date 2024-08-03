@@ -3,8 +3,8 @@ function HomePage(){
 
     return (
         <>
-            <div className={"page shop"}>
-                <button>Home</button>
+            <div className={"page home"}>
+                <p>Hello</p>
             </div>
         </>
     )

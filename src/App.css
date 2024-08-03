@@ -337,6 +337,26 @@ nav > :last-child {
     flex: 1;
 }
 
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    font-weight: bold;
+    user-select: none;
+    transform: scale(1);
+    >p{
+        transition: transform 1s ease-in-out;
+
+    }
+}
+
+
+.home>p:hover{
+
+    transform: scale(2);
+    cursor: pointer;
+}
 
 nav > .button-container {
     height: 5rem;
@@ -465,8 +485,9 @@ nav > button {
         width: 90%;
         padding: 0;
     }
-
-
+    .home{
+        font-size: 3rem;
+    }
 }
 
 
