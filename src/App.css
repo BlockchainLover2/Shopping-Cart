@@ -234,13 +234,13 @@ nav {
     z-index: 1;
 }
 
-/*nav > .button-group {
+nav > .button-group {
     display: flex;
     gap: 1rem;
     position: absolute;
     justify-self: center;
     align-self: center;
-*/
+}
 
 nav > .button-container {
     padding-right: 3rem;
