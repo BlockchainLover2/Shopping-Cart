@@ -451,7 +451,7 @@ nav > button {
         grid-template-columns: 1fr 1fr;
         padding: 0 1rem;
         > .button-group {
-
+            height: 75%;
             .button-container{
                 button{
                     padding: 0 0.5rem;
