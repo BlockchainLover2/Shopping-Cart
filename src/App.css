@@ -442,7 +442,7 @@ nav > button {
     .navbar {
         grid-template-columns: 1fr 1fr;
         padding: 0 1rem;
-        > :first-child {
+        > .button-group {
             position: initial;
             height: 75%;
             min-width: 0;

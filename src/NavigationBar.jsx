@@ -15,7 +15,7 @@ function NavigationBar({setPurchasedItems, itemsInCard, setItemsInCard, itemsInS
     return (
         <>
             <nav className="navbar">
-                <div>
+                <div className={"button-group"}>
                     <div className={"button-container"}>
                         <Link to={"/home"}>
                             <button className={"header-button"}>Home</button>
