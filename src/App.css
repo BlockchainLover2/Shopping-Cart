@@ -235,9 +235,8 @@ nav {
 }
 
 nav > .button-group {
-    display: flex;
-    gap: 1rem;
-    position: absolute;
+    justify-self: center;
+    align-self: center;
 }
 
 nav > .button-container {
