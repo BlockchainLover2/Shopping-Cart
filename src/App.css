@@ -1,42 +1,44 @@
-html{
+html {
     font-family: system-ui;
 }
 
 
-.header-button,.remove-card-item-button{
+.header-button, .remove-card-item-button {
     font-weight: bold;
     border-radius: 2rem;
     border: none;
-    transition: transform 0.1s ;
+    transition: transform 0.1s;
     user-select: none;
 }
-.header-button{
+
+.header-button {
     font-size: 2rem;
     padding: 0 2rem;
 }
 
 
-.remove-card-item-button{
+.remove-card-item-button {
     font-size: 1rem;
     padding: 0.5rem;
     box-shadow: #1f1cbf 0 0 13px 13px;
 }
 
-button:hover{
-    transition: transform 0.2s,background 0.2s;
+button:hover {
+    transition: transform 0.2s, background 0.2s;
     cursor: pointer;
     transform: scale(1.15);
-    background:cadetblue;
+    background: cadetblue;
 }
 
 
-.shop{
+.shop {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 1rem;
 }
-.shop-item{
+
+.shop-item {
     display: grid;
     grid-template-rows: 300px 1fr 1fr;
     border-radius: 1rem;
@@ -45,36 +47,41 @@ button:hover{
     box-shadow: #d31e70 0 0 11px 5px;
     position: relative;
 
-    img{
+    img {
         height: 100%;
         width: 100%;
         border-radius: 1rem;
 
     }
-    .button-container{
+
+    .button-container {
         display: none;
         user-select: none;
 
     }
-    .image-container{
+
+    .image-container {
         justify-self: normal;
         align-self: normal;
     }
-    .title{
+
+    .title {
         padding: 0 2rem;
     }
-    .move-card-image{
+
+    .move-card-image {
         transition: transform 0.5s;
         z-index: 5;
     }
 
 }
-.hide{
+
+.hide {
     pointer-events: none;
     opacity: 0;
 }
 
-.out-of-stock{
+.out-of-stock {
     font-size: 2rem;
     font-weight: bold;
     color: blueviolet;
@@ -83,27 +90,30 @@ button:hover{
 }
 
 
-
-.shop-item:hover{
+.shop-item:hover {
     cursor: pointer;
-    img{
+
+    img {
 
     }
-    .button-container{
+
+    .button-container {
         display: block;
     }
-    .price{
+
+    .price {
         display: none;
     }
 
 }
-h1{
+
+h1 {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-.purchased-items{
+.purchased-items {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -112,24 +122,27 @@ h1{
     padding: 5rem;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: cornflowerblue;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: blueviolet;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: lightblue;
 }
 
-.button-group{
+.button-group {
     display: flex;
     justify-content: center;
-    button{
+
+    button {
         font-size: 2rem;
         font-weight: bold;
         border: none;
@@ -139,22 +152,22 @@ h1{
 }
 
 @keyframes purchase-dialog {
-    0%{
+    0% {
         transform: translateY(-50%);
         opacity: 0;
     }
-    100%{
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-.visible.purchase-modal{
+.visible.purchase-modal {
     transform: translateY(0);
     opacity: 1;
 }
 
-.purchase-modal{
+.purchase-modal {
     position: fixed;
     width: 50%;
     height: 70%;
@@ -170,25 +183,26 @@ h1{
     border-radius: 1rem;
     gap: 1.5rem;
     transform: translateY(-50%);
-    transition: transform 0.2s , opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
     opacity: 0;
 
 
-
-    .image-container{
+    .image-container {
         width: 100%;
         height: 100%;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
         }
     }
 }
-.purchase-modal-item{
+
+.purchase-modal-item {
     background: white;
 }
 
-.buy-button,.checkout-button{
+.buy-button, .checkout-button {
     border-radius: 1rem;
     border: none;
     font-size: 1.5rem;
@@ -197,26 +211,22 @@ h1{
 }
 
 
-.checkout-button:hover{
+.checkout-button:hover {
     cursor: pointer;
 }
 
 
 
-.header-button:hover{
-    transform: scale(1.2);
-
-    cursor: pointer;
-}
 
 
-body{
+body {
     margin: 0;
     padding: 0;
 
 
 }
-#root{
+
+#root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -224,35 +234,37 @@ body{
 }
 
 
-
-
-nav{
+nav {
     background: #265578;
     display: grid;
     grid-auto-flow: column;
     justify-items: end;
-    gap: 5rem;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 1;
 }
-nav > :first-child{
+
+nav > :first-child {
     display: flex;
     gap: 1rem;
     position: absolute;
     justify-self: center;
     align-self: center;
 }
-nav > :last-child{
+
+nav > :last-child {
     padding-right: 3rem;
 }
-.buy-button{
+
+.buy-button {
     cursor: pointer;
 }
-.special{
-  animation: opacityUp 1s;
+
+.special {
+    animation: opacityUp 1s;
 }
-.shopping-card{
+
+.shopping-card {
     display: none;
     position: absolute;
     flex-direction: column;
@@ -261,15 +273,16 @@ nav > :last-child{
     width: 90%;
     top: 100%;
     overflow-x: hidden;
-    overflow-y:auto;
+    overflow-y: auto;
     border-radius: 1rem;
     background: honeydew;
     transform-origin: top;
     transform: scaleY(1);
-    padding:0.5rem;
+    padding: 0.5rem;
     gap: 1rem;
 }
-.card-item,.purchase-modal-item{
+
+.card-item, .purchase-modal-item {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -277,21 +290,24 @@ nav > :last-child{
     column-gap: 1rem;
     padding: 0.5rem;
     box-shadow: #e52b91 0 0 20px 13px;
-    .image-container{
+
+    .image-container {
         grid-row: span 2;
     }
 
-    img{
+    img {
         height: 100%;
         width: 100%;
         border-radius: 1rem;
         object-fit: cover;
 
     }
-    .title{
+
+    .title {
         grid-column: span 2;
     }
-    .button-container{
+
+    .button-container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -302,13 +318,13 @@ nav > :last-child{
 }
 
 
-.expending{
+.expending {
     display: flex;
     animation: expand 0.6s;
 }
 
 
-.closing{
+.closing {
     display: flex;
     animation: reverseExpand 0.6s;
     transform: scaleY(0);
@@ -316,85 +332,141 @@ nav > :last-child{
 }
 
 
-
-.page{
+.page {
     background: gray;
     flex: 1;
 }
 
 
-nav > .button-container{
+nav > .button-container {
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    >button{
+
+    > button {
         height: 50%;
     }
 }
-nav > button{
+
+nav > button {
 }
 
 
-.to-card{
+.to-card {
     position: absolute;
     width: 24px;
     height: 24px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);}
+    transform: translate(-50%, -50%);
+}
 
-.move-card-image{
-    --x-amount:1px;
-    --y-amount:1px;
-    transform: translate(var(--x-amount),var(--y-amount));
+.move-card-image {
+    --x-amount: 1px;
+    --y-amount: 1px;
+    transform: translate(var(--x-amount), var(--y-amount));
 
 }
 
 
 @keyframes expand {
-    0%{
+    0% {
         transform: scaleY(0);
     }
 
-    30%{
+    30% {
         transform: scaleY(1.2);
     }
 
-    70%{
+    70% {
         transform: scaleY(1.25);
     }
-    100%{
+    100% {
         transform: scaleY(1);
     }
 }
 
 @keyframes reverseExpand {
-    0%{
+    0% {
         transform: scaleY(1);
     }
 
-    30%{
+    30% {
         transform: scaleY(1.2);
     }
 
-    70%{
+    70% {
         transform: scaleY(1.25);
     }
-    100%{
+    100% {
         transform: scaleY(0);
     }
 }
+
 @keyframes opacityUp {
-    0%{
+    0% {
         opacity: 0;
     }
 
 
-    100%{
+    100% {
         opacity: 1;
     }
+}
+
+@media (max-width: 1100px) {
+
+
+    .navbar {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 1rem;
+        > :first-child {
+            position: initial;
+            height: 75%;
+            min-width: 0;
+            .button-container{
+                button{
+                    padding: 0 0.5rem;
+                    height: 100%;
+                }
+            }
+        }
+        >.button-container{
+            padding: 0;
+            position: initial;
+            >button{
+                height: 75%;
+                min-width: 0;
+                padding: 0 0.5rem;
+
+            }
+        }
+        button {
+            font-size: 1rem;
+        }
+    }
+
+    button:hover{
+        transform: scale(1);
+    }
+    .shopping-card{
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 90%;
+    }
+
+    .purchased-items{
+        padding: 1rem;
+    }
+    .purchase-modal{
+        width: 90%;
+        padding: 0;
+    }
+
+
 }
 
 
