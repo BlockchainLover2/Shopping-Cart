@@ -147,7 +147,6 @@ h1 {
         font-weight: bold;
         border: none;
         border-radius: 1rem;
-        padding: 1.5rem;
     }
 }
 
@@ -244,7 +243,7 @@ nav {
     z-index: 1;
 }
 
-nav > :first-child {
+nav > .button-group {
     display: flex;
     gap: 1rem;
     position: absolute;
@@ -252,7 +251,7 @@ nav > :first-child {
     align-self: center;
 }
 
-nav > :last-child {
+nav > .button-container {
     padding-right: 3rem;
 }
 
