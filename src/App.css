@@ -127,7 +127,7 @@ h1 {
 
 
 .button-group {
-    display: flex;
+  /*  display: flex;
     justify-content: center;
 
     button {
@@ -136,6 +136,8 @@ h1 {
         border: none;
         border-radius: 1rem;
     }
+
+   */
 }
 
 @keyframes purchase-dialog {
@@ -231,13 +233,13 @@ nav {
     z-index: 1;
 }
 
-nav > .button-group {
+/*nav > .button-group {
     display: flex;
     gap: 1rem;
     position: absolute;
     justify-self: center;
     align-self: center;
-}
+*/
 
 nav > .button-container {
     padding-right: 3rem;
@@ -449,7 +451,7 @@ nav > button {
     .navbar {
         grid-template-columns: 1fr 1fr;
         padding: 0 1rem;
-        > .button-group {
+        > /*.button-group {
             position: static;
             height: 75%;
             min-width: 0;
@@ -459,7 +461,7 @@ nav > button {
                     height: 100%;
                 }
             }
-        }
+        }*/
         >.button-container{
             padding: 0;
             position: static;
