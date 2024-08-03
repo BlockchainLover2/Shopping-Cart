@@ -21,11 +21,9 @@ function PurchaseModal({purchasedItemsArray,setPurchasedItems}){
                     })}
                 </div>
 
-                <div className={"button-group"}>
                     <div className={"button-container"}>
                         <button onClick={()=>setAnimationClass("")}>OK</button>
                     </div>
-                </div>
             </div>
         </>
 
