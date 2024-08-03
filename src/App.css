@@ -235,7 +235,9 @@ nav {
 }
 
 nav > .button-group {
-
+    display: flex;
+    gap: 1rem;
+    position: absolute;
     justify-self: center;
     align-self: center;
 }
@@ -451,7 +453,8 @@ nav > button {
         grid-template-columns: 1fr 1fr;
         padding: 0 1rem;
         > .button-group {
-            height: 75%;
+            position: static;
+            min-width: 0;
             .button-container{
                 button{
                     padding: 0 0.5rem;
