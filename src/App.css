@@ -229,7 +229,7 @@ nav {
     display: grid;
     grid-auto-flow: column;
     justify-items: end;
-    position: relative;
+    position: sticky;
     top: 0;
     z-index: 1;
 }
@@ -238,8 +238,6 @@ nav > .button-group {
     display: flex;
     gap: 1rem;
     position: absolute;
-    justify-self: center;
-    align-self: center;
 }
 
 nav > .button-container {
