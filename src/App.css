@@ -229,7 +229,7 @@ nav {
     display: grid;
     grid-auto-flow: column;
     justify-items: end;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1;
 }
