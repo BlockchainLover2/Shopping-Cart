@@ -56,7 +56,7 @@ function ShoppingCard({changeStates,setPurchasedItems,itemsInCard, setItemsInCar
                 <button onClick={()=>{
                     setPurchasedItems([...itemsInCard])
                     setItemsInCard([])
-                    changeStates()
+                    changeStates(true)
                 }} className={"checkout-button"}>Checkout</button>
             </div>
             <p ref={itemsEndRef}>{sum}</p>

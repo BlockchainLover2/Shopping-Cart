@@ -241,6 +241,7 @@ nav > .button-group {
     position: absolute;
     justify-self: center;
     align-self: center;
+    align-items: center;
 }
 
 nav > .button-container {

@@ -6,11 +6,20 @@ function NavigationBar({setPurchasedItems, itemsInCard, setItemsInCard, itemsInS
     const [isExpending, setIsExpending] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
 
-    function changeStates() {
+    function changeStates(setAllToFalse) {
+        if(setAllToFalse){
+            setIsExpending(false);
+            setIsClosing(false)
+            return
+        }
         setIsExpending(!isExpending);
         if (isExpending)
             setIsClosing(true)
+
+
+
     }
+
 
     return (
         <>
