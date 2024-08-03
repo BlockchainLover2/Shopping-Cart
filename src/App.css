@@ -454,6 +454,7 @@ nav > button {
         padding: 0 1rem;
         > .button-group {
             position: static;
+            height: 50px;
             min-width: 0;
             .button-container{
                 button{
