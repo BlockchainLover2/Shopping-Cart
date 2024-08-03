@@ -236,6 +236,7 @@ nav {
 
 nav > .button-group {
     display: flex;
+    height: 5rem;
     gap: 1rem;
     position: absolute;
     justify-self: center;
@@ -454,9 +455,11 @@ nav > button {
         padding: 0 1rem;
         > .button-group {
             position: static;
-            height: 50px;
             min-width: 0;
+            justify-content: center;
+            align-items: center;
             .button-container{
+                height: 75%;
                 button{
                     padding: 0 0.5rem;
                     height: 100%;
