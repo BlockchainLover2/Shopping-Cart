@@ -400,6 +400,33 @@ nav > button {
     }
 }
 
+.progress-bar-container{
+    height: 6px;
+    background: gainsboro;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: opacity 1s;
+    .progress-bar{
+        background-color: green;
+        width: 10px;
+        height: 100%;
+        transition: width 1s;
+    }
+}
+
+
+@keyframes progress-bar {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
 @keyframes reverseExpand {
     0% {
         transform: scaleY(1);
